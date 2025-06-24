@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF‑8" />
+  <meta name="viewport" content="width=device‑width,initial‑scale=1.0" />
+  <title>VibeWithCode</title>
+  <link rel="icon" href="logo.png" />
+  <link rel="stylesheet" href="ss.css" />
+  <script defer src="ss.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <img src="logo.png" class="logo" alt="logo" />
+      <h1>🪙 VibeWithCode Algorithm Engine</h1>
+    </div>
+    <button id="modeToggle">🌙</button>
+  </header>
+
+  <main class="cards">
+    <!-- Block 1 -->
+    <div class="card" data-id="1">
+      <div class="card-header">
+        <img src="logo.png" class="icon" alt="logo" />
+        <button class="btn refresh">⟳</button>
+      </div>
+      <h2>1. Fibonacci Sequence</h2>
+      <p>Generate Fibonacci numbers up to a given limit.</p>
+      <input type="number" placeholder="e.g. 100" />
+      <button class="btn run">Run</button>
+      <pre class="output"></pre>
+    </div>
+
+    <!-- Block 2 -->
+    <div class="card" data-id="2">
+      <div class="card-header">
+        <img src="logo.png" class="icon" alt="logo" />
+        <button class="btn refresh">⟳</button>
+      </div>
+      <h2>2. Power of Two</h2>
+      <p>Is your number a power of two?</p>
+      <input type="number" placeholder="e.g. 8, 6" />
+      <button class="btn run">Run</button>
+      <pre class="output"></pre>
+    </div>
+
+    <!-- Block 3 -->
+    <div class="card" data-id="3">
+      <div class="card-header">
+        <img src="logo.png" class="icon" alt="logo" />
+        <button class="btn refresh">⟳</button>
+      </div>
+      <h2>3. Capitalize Words</h2>
+      <p>Capitalizes the first letter of each word in your sentence.</p>
+      <input type="text" placeholder='Try: "hi there"' />
+      <button class="btn run">Run</button>
+      <pre class="output"></pre>
+    </div>
+
+    <!-- Block 4 -->
+    <div class="card" data-id="4">
+      <div class="card-header">
+        <img src="logo.png" class="icon" alt="logo" />
+        <button class="btn refresh">⟳</button>
+      </div>
+      <h2>4. Number Guessing Game</h2>
+      <p>Guess the hidden number between 1 and 100. Cold, Warm, Hot!</p>
+      <input type="number" placeholder="Enter your guess..." />
+      <button class="btn run">Guess</button>
+      <pre class="output"></pre>
+    </div>
+
+    <!-- Block 5 -->
+    <div class="card" data-id="5">
+      <div class="card-header">
+        <img src="logo.png" class="icon" alt="logo" />
+        <button class="btn refresh">⟳</button>
+      </div>
+      <h2>5. Shopping Cart Calculation</h2>
+      <p>Enter JSON-style items to compute total (with discount + tax).</p>
+      <textarea placeholder='[{ "price": 30, "quantity": 2 }, { "price": 60, "quantity": 1 }]' rows="4"></textarea>
+      <button class="btn run">Calculate</button>
+      <pre class="output"></pre>
+    </div>
+
+    <!-- Block 6 -->
+    <div class="card" data-id="6">
+      <div class="card-header">
+        <img src="logo.png" class="icon" alt="logo" />
+        <button class="btn refresh">⟳</button>
+      </div>
+      <h2>6. Payroll Calculator</h2>
+      <p>Enter salary and hours. Calculates net pay with tax + social security.</p>
+      <input type="number" placeholder="Base salary (e.g., 500)" />
+      <input type="number" placeholder="Hours worked (e.g., 45)" />
+      <button class="btn run">Calculate</button>
+      <pre class="output"></pre>
+    </div>
+  </main>
+</body>
+</html>

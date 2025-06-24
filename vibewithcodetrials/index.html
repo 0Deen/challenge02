@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VibdeWithCode</title>
+  <link rel="icon" type="image/png" href="images/lopo.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <section class="infographics">
+    <header class="main-title">
+      <h1>🪙 VibeWithCode Algorithm Engine</h1>
+      <p style="color: #aaa;">Enter values. Click to compute. See elegant answers appear.</p>
+    </header>
+
+    <div class="questions">
+      <!-- 1. Fibonacci Sequence -->
+      <div class="question-block" data-id="1">
+        <h2>1. Fibonacci Sequence</h2>
+        <p>Generate Fibonacci numbers up to a given limit.</p>
+        <input type="number" placeholder="Enter a max limit like 100..." />
+        <button class="run-btn">Run</button>
+        <pre class="output"></pre>
+      </div>
+
+      <!-- 2. Power of Two -->
+      <div class="question-block" data-id="2">
+        <h2>2. Power of Two</h2>
+        <p>Is your number a power of two?</p>
+        <input type="number" placeholder="Try numbers like 8, 6..." />
+        <button class="run-btn">Run</button>
+        <pre class="output"></pre>
+      </div>
+
+      <!-- 3. Capitalize Each Word -->
+      <div class="question-block" data-id="3">
+        <h2>3. Capitalize Words</h2>
+        <p>Capitalizes the first letter of each word in your sentence.</p>
+        <input type="text" placeholder='Try: "hi there"' />
+        <button class="run-btn">Run</button>
+        <pre class="output"></pre>
+      </div>
+
+      <!-- 4. Guessing Game -->
+      <div class="question-block" data-id="4">
+        <h2>4. Number Guessing Game</h2>
+        <p>Guess the hidden number between 1 and 100. Cold, Warm, Hot!</p>
+        <input type="number" placeholder="Enter your guess..." />
+        <button class="run-btn">Guess</button>
+        <pre class="output"></pre>
+      </div>
+
+      <!-- 5. Shopping Cart -->
+      <div class="question-block" data-id="5">
+        <h2>5. Shopping Cart Calculation</h2>
+        <p>Enter JSON-style items to compute total (with discount + tax).</p>
+        <textarea placeholder='[{ "price": 30, "quantity": 2 }, { "price": 60, "quantity": 1 }]' rows="4"></textarea>
+        <button class="run-btn">Calculate</button>
+        <pre class="output"></pre>
+      </div>
+
+      <!-- 6. Payroll Calculator -->
+      <div class="question-block" data-id="6">
+        <h2>6. Payroll Calculator</h2>
+        <p>Enter salary and hours. Calculates net pay with tax + social security.</p>
+        <input type="number" placeholder="Base salary (e.g., 500)" />
+        <input type="number" placeholder="Hours worked (e.g., 45)" />
+        <button class="run-btn">Calculate</button>
+        <pre class="output"></pre>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
