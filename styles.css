@@ -186,60 +186,48 @@ footer a:hover {
     font-size: 1.8rem;
   }
 }
-/* ✅ Toggle Button Style */
-.mode-toggle {
-  position: fixed;
-  top: 15px;
-  right: 20px;
-  z-index: 999;
-  background: #222;
-  color: #fff;
-  border: 2px solid #ff9800;
-  border-radius: 30px;
-  padding: 8px 16px;
+/* Toggle Button */
+.toggle-mode {
+  background: #444;
+  color: #ffcc80;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
   cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: all 0.3s ease;
+  margin-top: 15px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.mode-toggle:hover {
-  background-color: #ff9800;
-  color: #000;
+.toggle-mode:hover {
+  background: #666;
 }
 
-/* ✅ Light Mode Overrides */
+/* Light Mode Styles */
 body.light {
-  background: #f2f2f2;
-  color: #000;
-}
-
-body.light .main-title p,
-body.light .question-block p,
-body.light footer {
-  color: #333;
+  background: linear-gradient(to right, #ffffff, #f5f5f5);
+  color: #111;
 }
 
 body.light .question-block {
-  background: #fff;
-  border-color: #ccc;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  background: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(255, 193, 7, 0.15);
 }
 
-body.light .question-block:hover {
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+body.light .question-block h2 {
+  color: #ff6f00;
+}
+
+body.light .question-block p {
+  color: #444;
 }
 
 body.light .question-block input,
 body.light .question-block textarea {
-  background: #f9f9f9;
+  background: #f2f2f2;
   color: #111;
-}
-
-body.light .output {
-  background: #eee;
-  color: #111;
-  border-color: #ccc;
+  border: 1px solid #ddd;
 }
 
 body.light .run-btn,
@@ -248,7 +236,19 @@ body.light .refresh-btn {
   color: #000;
 }
 
-body.light .run-btn:hover,
-body.light .refresh-btn:hover {
-  background: linear-gradient(to right, #ffd180, #ffcc80);
+body.light .output {
+  background: #f9f9f9;
+  color: #000;
+  border: 1px solid #ccc;
 }
+
+body.light footer {
+  background: #eee;
+  color: #333;
+  border-top: 1px solid #ccc;
+}
+
+body.light footer a {
+  color: #e65100;
+}
+
