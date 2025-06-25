@@ -1,14 +1,15 @@
-
 document.querySelectorAll('.question-block').forEach(block => {
   const id = block.getAttribute('data-id');
   const runBtn = block.querySelector('.run-btn');
-  const resetBtn = document.createElement('button');
   const output = block.querySelector('.output');
 
+  // Create and append Reset button
+  const resetBtn = document.createElement('button');
   resetBtn.textContent = 'Refresh';
   resetBtn.classList.add('refresh-btn');
   block.appendChild(resetBtn);
 
+  // Run logic
   runBtn.addEventListener('click', () => {
     const inputs = block.querySelectorAll('input, textarea');
     let result = '';
@@ -16,7 +17,6 @@ document.querySelectorAll('.question-block').forEach(block => {
     try {
       switch (id) {
         case '1': {
-          // Fibonacci Sequence up to 100
           const limit = parseInt(inputs[0].value);
           if (isNaN(limit)) throw new Error('Please enter a number.');
           if (limit > 100) {
@@ -34,7 +34,6 @@ document.querySelectorAll('.question-block').forEach(block => {
         }
 
         case '2': {
-          // Power of Two
           const num = parseInt(inputs[0].value);
           if (isNaN(num)) throw new Error('Please enter a number.');
           result = (num > 0 && (num & (num - 1)) === 0) ? 'True' : 'False';
@@ -42,14 +41,12 @@ document.querySelectorAll('.question-block').forEach(block => {
         }
 
         case '3': {
-          // Capitalize first letter of each word
           const str = inputs[0].value;
           result = str.replace(/\b\w/g, c => c.toUpperCase());
           break;
         }
 
         case '4': {
-          // Number guessing game from 1–100
           const guess = parseInt(inputs[0].value);
           window._number = window._number || Math.floor(Math.random() * 100) + 1;
           window._guesses = window._guesses || [];
@@ -75,17 +72,15 @@ document.querySelectorAll('.question-block').forEach(block => {
         }
 
         case '5': {
-          // Shopping Cart Calculation
           const products = JSON.parse(inputs[0].value);
           let total = products.reduce((sum, p) => sum + p.price * p.quantity, 0);
-          if (total > 100) total *= 0.9; // 10% discount
-          total *= 1.08; // 8% tax
+          if (total > 100) total *= 0.9;
+          total *= 1.08;
           result = `Total with discount & tax: $${total.toFixed(2)}`;
           break;
         }
 
         case '6': {
-          // Payroll Calculation
           const base = parseFloat(inputs[0].value);
           const hours = parseFloat(inputs[1].value);
           if (isNaN(base) || isNaN(hours)) throw new Error('Enter valid salary and hours.');
@@ -94,7 +89,7 @@ document.querySelectorAll('.question-block').forEach(block => {
           let gross = base + (overtime * hourly * 1.5);
           let tax = gross <= 500 ? 0.1 : gross <= 1000 ? 0.2 : 0.3;
           let afterTax = gross * (1 - tax);
-          let net = afterTax * (1 - 0.062); // social security 6.2%
+          let net = afterTax * (1 - 0.062);
           result = `Net Pay: $${net.toFixed(2)}`;
           break;
         }
@@ -109,6 +104,7 @@ document.querySelectorAll('.question-block').forEach(block => {
     output.textContent = result;
   });
 
+  // Reset logic
   resetBtn.addEventListener('click', () => {
     const inputs = block.querySelectorAll('input, textarea');
     inputs.forEach(el => (el.value = ''));
@@ -116,15 +112,11 @@ document.querySelectorAll('.question-block').forEach(block => {
   });
 });
 
-// Toggle dark/light mode
-const toggleBtn = document.getElementById('mode-toggle');
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('light');
-});
-// ✅ DARK/LIGHT MODE LOGIC
+// ============ 🌗 Dark/Light Mode =============
+
 const modeToggleBtn = document.getElementById('mode-toggle');
 
-// Set theme from localStorage on load
+// Apply saved mode on load
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'light') {
   document.body.classList.add('light');
@@ -133,11 +125,9 @@ if (savedTheme === 'light') {
   modeToggleBtn.textContent = '🌙 Light Mode';
 }
 
+// Toggle theme on click
 modeToggleBtn.addEventListener('click', () => {
   const isLight = document.body.classList.toggle('light');
-  const modeText = isLight ? '☀️ Dark Mode' : '🌙 Light Mode';
-  modeToggleBtn.textContent = modeText;
   localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  modeToggleBtn.textContent = isLight ? '☀️ Dark Mode' : '🌙 Light Mode';
 });
-
-
