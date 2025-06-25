@@ -121,3 +121,23 @@ const toggleBtn = document.getElementById('mode-toggle');
 toggleBtn.addEventListener('click', () => {
   document.body.classList.toggle('light');
 });
+// ✅ DARK/LIGHT MODE LOGIC
+const modeToggleBtn = document.getElementById('mode-toggle');
+
+// Set theme from localStorage on load
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+  document.body.classList.add('light');
+  modeToggleBtn.textContent = '☀️ Dark Mode';
+} else {
+  modeToggleBtn.textContent = '🌙 Light Mode';
+}
+
+modeToggleBtn.addEventListener('click', () => {
+  const isLight = document.body.classList.toggle('light');
+  const modeText = isLight ? '☀️ Dark Mode' : '🌙 Light Mode';
+  modeToggleBtn.textContent = modeText;
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+});
+
+
