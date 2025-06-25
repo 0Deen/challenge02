@@ -1,3 +1,4 @@
+
 document.querySelectorAll('.question-block').forEach(block => {
   const id = block.getAttribute('data-id');
   const runBtn = block.querySelector('.run-btn');
@@ -16,9 +17,12 @@ document.querySelectorAll('.question-block').forEach(block => {
       switch (id) {
         case '1': {
           // Fibonacci Sequence up to 100
-          let limit = parseInt(inputs[0].value);
+          const limit = parseInt(inputs[0].value);
           if (isNaN(limit)) throw new Error('Please enter a number.');
-          if (limit > 100) limit = 100;
+          if (limit > 100) {
+            result = 'yoow andika numbers below 100 bro';
+            break;
+          }
           let a = 0, b = 1;
           const seq = [];
           while (a <= limit) {
