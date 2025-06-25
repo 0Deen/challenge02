@@ -186,3 +186,69 @@ footer a:hover {
     font-size: 1.8rem;
   }
 }
+/* ✅ Toggle Button Style */
+.mode-toggle {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 999;
+  background: #222;
+  color: #fff;
+  border: 2px solid #ff9800;
+  border-radius: 30px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.mode-toggle:hover {
+  background-color: #ff9800;
+  color: #000;
+}
+
+/* ✅ Light Mode Overrides */
+body.light {
+  background: #f2f2f2;
+  color: #000;
+}
+
+body.light .main-title p,
+body.light .question-block p,
+body.light footer {
+  color: #333;
+}
+
+body.light .question-block {
+  background: #fff;
+  border-color: #ccc;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+body.light .question-block:hover {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+body.light .question-block input,
+body.light .question-block textarea {
+  background: #f9f9f9;
+  color: #111;
+}
+
+body.light .output {
+  background: #eee;
+  color: #111;
+  border-color: #ccc;
+}
+
+body.light .run-btn,
+body.light .refresh-btn {
+  background: linear-gradient(to right, #ffe0b2, #fff3e0);
+  color: #000;
+}
+
+body.light .run-btn:hover,
+body.light .refresh-btn:hover {
+  background: linear-gradient(to right, #ffd180, #ffcc80);
+}
